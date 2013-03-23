@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Textformations by loopshoot</title>
 
+    <link rel="stylesheet" href="stylesheets/tf-core.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -15,24 +16,35 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Textformations</h1>
+        <h1>Textformations/css</h1>
         <p>css for football formation generat</p>
+		<h4>このページではサッカーのフォーメーション図を簡単に作れるCSSを配布しています。</h3>
+		<hr>
 
         <p class="view"><a href="https://github.com/loopshoot/TextFormations">View the Project on GitHub <small>loopshoot/TextFormations</small></a></p>
-
 
         <ul>
           <li><a href="https://github.com/loopshoot/TextFormations/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/loopshoot/TextFormations/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/loopshoot/TextFormations">View On <strong>GitHub</strong></a></li>
         </ul>
+		<hr>
+		<h3>
+		<a href="#p1">例</a><br /><br />
+		<a href="#p2">使い方</a>
+		</h3>
+		<hr>
+		<a href="http://tf.loopshoot.com/members.pl"><div style="border:1px solid #ddd;padding:20px;text-align:center;font-size:20px;">
+        <strong>作成ツールを使う</strong>
+        </div></a>
+        <hr>
+
+
       </header>
       <section>
-        <h3>Welcome to TextFormations</h3>
+<a name="p1">  </a>
 
-<h2>このページではサッカーのフォーメーション図を簡単に作れるCSSを配布しています。</h2>
-
-<h3>作り方の例</h3>
+<br><h2 >例</h2>
 
 <p>CSSを読み込んで</p>
 
@@ -41,11 +53,10 @@
 
 <p>チーム名などの情報を書き込みます。</p>
 
-<pre><code>&lt;link rel="stylesheet" href="/tf-core.css" type="text/css" /&gt;
-    &lt;div class='tf' style="width:280px"&gt;
-    &lt;div class='tf-team'&gt;チーム名&lt;/div&gt;
-    &lt;div class='tf-desc'&gt;タイトル&lt;/div&gt;
-    &lt;div class='tf-field $system_class' style="height:240px"&gt;
+<pre><code>&lt;div class='tf' style="width:280px;"&gt;
+    &lt;div class='tf-team'&gt;team name&lt;/div&gt;
+    &lt;div class='tf-desc'&gt;description&lt;/div&gt;
+    &lt;div class='tf-field f4-2-3-1_' style="height:240px;"&gt;
         &lt;div class='tf-pc'&gt;&lt;/div&gt;
         &lt;div class='tf-pb'&gt;11&lt;/div&gt;
         &lt;div class='tf-pa'&gt;10&lt;/div&gt;
@@ -65,27 +76,79 @@
 
 <p>これだけでこんなフォーメーション図が出来上がります。</p>
 
-<p></p>
+<div class='tf' style="width:280px;"><div class='tf-team'>team name</div><div class='tf-desc'>description</div><div class='tf-field f4-2-3-1_' style="height:220px;"><div class='tf-pc'></div><div class='tf-pb'>11</div><div class='tf-pa'>10</div><div class='tf-p9'>9</div><div class='tf-p8'>8</div><div class='tf-p7'>7</div><div class='tf-p6'>6</div><div class='tf-p5'>5</div><div class='tf-p4'>4</div><div class='tf-p3'>3</div><div class='tf-p2'>2</div><div class='tf-p1'>1</div></div><div class='tf-foot'></div></div>
 
-<div>
-    <div>チーム名</div>
-    <div>タイトル</div>
-    <div>
-        <div></div>
-        <div>11</div>
-        <div>10</div>
-        <div>9</div>
-        <div>8</div>
-        <div>7</div>
-        <div>6</div>
-        <div>5</div>
-        <div>4</div>
-        <div>3</div>
-        <div>2</div>
-        <div>1</div>
-    </div>
-    <div></div>
-</div>
+<hr />
+<a name="p2">  </a>
+<br><br><h2 >使い方</h2>
+<h4>1. 高さ、幅の設定</h4>
+	高さは <strong>.tf</strong> に設定してください。
+	<pre><code>&lt;div class='tf' style="width:280px;"&gt;</code></pre>
+	幅は <strong>.tf-field</strong> に設定してください。
+	<pre><code>&lt;div class='tf-field f4-2-3-1_' style="height:240px;"&gt;</code></pre>
+
+<h4>2. システムの設定</h4>
+	システムは .tf-field にならべて、以下のクラス名を設定してください。<br />
+	<strong>f4-2-3-1_</strong>の部分がシステムを示します。
+	<pre><code>&lt;div class='tf-field f4-2-3-1_' style="height:240px;"&gt;</code></pre>
+	<table>
+		<tr><th>システム</th><th>クラス名<th></tr>
+		<tr><td>4-2-3-1</td><td>f4-2-3-1_<td></tr>
+		<tr><td>4-4-2(ダブルボランチ)</td><td>f4-4-2_box<td></tr>
+		<tr><td>4-4-2(ワンボランチ)</td><td>f4-1-2-1-2_<td></tr>
+		<tr><td>4-3-3(ダブルボランチ)</td><td>f4-2-1-3_<td></tr>
+		<tr><td>4-3-3(ワンボランチ)</td><td>f4-1-2-3_<td></tr>
+		<tr><td>4-3-2-1(クリスマスツリー)</td><td>f4-3-2-1_<td></tr>
+		<tr><td>4-1-4-1</td><td>f4-1-4-1_<td></tr>
+		<tr><td>3-5-2(ダブルボランチ)</td><td>f3-4-1-2_<td></tr>
+		<tr><td>3-5-2(ワンボランチ)</td><td>f3-3-2-2_<td></tr>
+		<tr><td>3-6-1</td><td>f3-4-2-1_<td></tr>
+		<tr><td>3-4-3(ダブルボランチ)</td><td>f3-4-3_<td></tr>
+		<tr><td>3-4-3(ワンボランチ)</td><td>f3-3-1-3_<td></tr>
+		<tr><td>4-3-3(バルサ仕様)</td><td>f4-3-3_barsa<td></tr>
+	</table>	
+
+<h4>3. プレイヤーの設定</h4>
+	選手名はFWから順に <strong>.tf-tb,.tf-fa,tf-f9,,,.tf-fa</strong> に設定してください。
+<pre><code>	&lt;div class='tf-pb'&gt;11&lt;/div&gt;
+        &lt;div class='tf-pa'&gt;10&lt;/div&gt;
+        &lt;div class='tf-p9'&gt;9&lt;/div&gt;
+        &lt;div class='tf-p8'&gt;8&lt;/div&gt;
+        &lt;div class='tf-p7'&gt;7&lt;/div&gt;
+        &lt;div class='tf-p6'&gt;6&lt;/div&gt;
+        &lt;div class='tf-p5'&gt;5&lt;/div&gt;
+        &lt;div class='tf-p4'&gt;4&lt;/div&gt;
+        &lt;div class='tf-p3'&gt;3&lt;/div&gt;
+        &lt;div class='tf-p2'&gt;2&lt;/div&gt;
+        &lt;div class='tf-p1'&gt;1&lt;/div&gt;
+</code></pre>
+	選手名が長すぎる場合は自動的に省略されます。
+<div class='tf' style="width:280px;"><div class='tf-team'>team name</div><div class='tf-desc'>description</div><div class='tf-field f4-2-3-1_' style="height:220px;"><div class='tf-pc'></div><div class='tf-pb'>11</div><div class='tf-pa'>10</div><div class='tf-p9'>9</div><div class='tf-p8'>8</div><div class='tf-p7'>7</div><div class='tf-p6'>選手名が長すぎるため、省略されています。</div><div class='tf-p5'>5</div><div class='tf-p4'>4</div><div class='tf-p3'>3</div><div class='tf-p2'>2</div><div class='tf-p1'>1</div></div><div class='tf-foot'></div></div>
+
+<h4>4. 基本HTMLコード</h4>
+ここからスタート！
+<pre><code>&lt;div class='tf' style="width:280px;"&gt;
+    &lt;div class='tf-team'&gt;team name&lt;/div&gt;
+    &lt;div class='tf-desc'&gt;description&lt;/div&gt;
+    &lt;div class='tf-field f4-2-3-1_' style="height:240px;"&gt;
+        &lt;div class='tf-pc'&gt;&lt;/div&gt;
+        &lt;div class='tf-pb'&gt;11&lt;/div&gt;
+        &lt;div class='tf-pa'&gt;10&lt;/div&gt;
+        &lt;div class='tf-p9'&gt;9&lt;/div&gt;
+        &lt;div class='tf-p8'&gt;8&lt;/div&gt;
+        &lt;div class='tf-p7'&gt;7&lt;/div&gt;
+        &lt;div class='tf-p6'&gt;6&lt;/div&gt;
+        &lt;div class='tf-p5'&gt;5&lt;/div&gt;
+        &lt;div class='tf-p4'&gt;4&lt;/div&gt;
+        &lt;div class='tf-p3'&gt;3&lt;/div&gt;
+        &lt;div class='tf-p2'&gt;2&lt;/div&gt;
+        &lt;div class='tf-p1'&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class='tf-foot'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/loopshoot">loopshoot</a></p>
