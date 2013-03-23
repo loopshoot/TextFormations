@@ -7,6 +7,7 @@
     <meta name="description" content="Textformations : css for football formation generat" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/tf-core.css">
 
     <title>Textformations</title>
   </head>
@@ -39,16 +40,16 @@
 
 <p>CSSを読み込んで</p>
 
-<pre><code>&lt;link rel="stylesheet" href="/tf-core.css" type="text/css" /&gt;
+<pre><code>&lt;link rel="stylesheet" href="./tf-core.css" type="text/css" /&gt;
 </code></pre>
 
 <p>チーム名などの情報を書き込みます。</p>
 
-<pre><code>&lt;link rel="stylesheet" href="/tf-core.css" type="text/css" /&gt;
+<pre><code>&lt;link rel="stylesheet" href="./tf-core.css" type="text/css" /&gt;
     &lt;div class='tf' style="width:280px"&gt;
-    &lt;div class='tf-team'&gt;チーム名&lt;/div&gt;
-    &lt;div class='tf-desc'&gt;タイトル&lt;/div&gt;
-    &lt;div class='tf-field $system_class' style="height:240px"&gt;
+    &lt;div class='tf-team'&gt;team&lt;/div&gt;
+    &lt;div class='tf-desc'&gt;description&lt;/div&gt;
+    &lt;div class='tf-field f4-2-3-1_' style="height:240px"&gt;
         &lt;div class='tf-pc'&gt;&lt;/div&gt;
         &lt;div class='tf-pb'&gt;11&lt;/div&gt;
         &lt;div class='tf-pa'&gt;10&lt;/div&gt;
@@ -68,26 +69,11 @@
 
 <p>これだけでこんなフォーメーション図が出来上がります。</p>
 
-<p></p>
+<h3>使い方</h3>
+
 
 <div>
-    <div>チーム名</div>
-    <div>タイトル</div>
-    <div>
-        <div></div>
-        <div>11</div>
-        <div>10</div>
-        <div>9</div>
-        <div>8</div>
-        <div>7</div>
-        <div>6</div>
-        <div>5</div>
-        <div>4</div>
-        <div>3</div>
-        <div>2</div>
-        <div>1</div>
-    </div>
-    <div></div>
+<div class='tf' style="width:280px;"><div class='tf-team'>team</div><div class='tf-desc'>description</div><div class='tf-field f4-2-3-1_' style="height:220px;"><div class='tf-pc'></div><div class='tf-pb'>11</div><div class='tf-pa'>10</div><div class='tf-p9'>9</div><div class='tf-p8'>8</div><div class='tf-p7'>7</div><div class='tf-p6'>6</div><div class='tf-p5'>5</div><div class='tf-p4'>4</div><div class='tf-p3'>3</div><div class='tf-p2'>2</div><div class='tf-p1'>1</div></div><div class='tf-foot'></div></div>
 </div>
       </section>
     </div>
